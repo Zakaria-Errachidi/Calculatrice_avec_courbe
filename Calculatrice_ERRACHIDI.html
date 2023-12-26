@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculatrice</title>
+    <link rel="stylesheet" type="text/css" href="calculatrice.css">
+</head>
+
+<body>
+    <div id="calculator">
+        <div id="history"></div>
+        <div id="resultat">
+            <canvas id="canvas" width="400" height="400"></canvas>
+        </div>
+        <form id="spec">
+            <input id="fctholder" type="text" placeholder="f(x)">
+        </form>
+
+        <button id="dezoom" >zoom-</button>
+        <button id="zoom" >zoom+</button>
+        <button id="operations" onclick="press('x')">x</button>
+        <button id="operations" onclick="press('**')">x<sup>y</sup></button>
+        <button id="operations" onclick="press('²')">x<sup>2</sup></button>
+       
+
+        <button id="operations" onclick="press('math.cos(')"> cos </button>
+        <button id="operations" onclick="press('math.sin(')"> sin </button>
+        <button id="operations" onclick="press('math.tan(')"> tan </button>
+        <button id="operations" onclick="press('math.log10(')"> log </button>
+        <button id="operations" onclick="press('math.log(')"> ln </button>
+
+        <button id="operations" onclick="press(')')">(</button>
+        <button id="operations" onclick="press(')')">)</button>
+        <button id="operations" onclick="press('math.abs(')">abs</button>
+        <button id="clc">AC</button>
+        
+        <button id="mafct" >F(x)</button>
+        
+
+        <button onclick="press('7')">7</button>
+        <button onclick="press('8')">8</button>
+        <button onclick="press('9')">9</button>
+        <button id="operations" onclick="clearHistory()">C</button>
+        <button id="operations" onclick="del()">del</button>
+
+        <button onclick="press('4')">4</button>
+        <button onclick="press('5')">5</button>
+        <button onclick="press('6')">6</button>
+        <button id="operations" onclick="press('+')">+</button>
+        <button id="operations" onclick="press('-')">-</button>
+
+        <button onclick="press('1')">1</button>
+        <button onclick="press('2')">2</button>
+        <button onclick="press('3')">3</button>
+        <button id="operations" onclick="press('/')">/</button>
+        <button id="operations" onclick="press('*')">*</button>
+        
+
+        <button onclick="press('0')">0</button>
+        <button onclick="press('.')">.</button>
+        <button id="operations" onclick="press('%')">%</button>
+        <button id="operations" onclick="press('math.sqrt(')"> √ </button>
+        <button id="operations" onclick="alterner()">=<sup style="font-size: 10px;"> EXE </sup></button>
+        
+    </div>
+    <div id="explanation">
+        <h2>Comment utiliser</h2>
+        <p>Cliquez sur les boutons pour effectuer des calculs :</p>
+        <ul>
+            <li><strong>Nombres :</strong> Cliquez sur les boutons numériques pour entrer des chiffres.</li>
+            <li><strong>Opérations :</strong> Cliquez sur +, -, *, /, % pour effectuer des opérations de base.</li>
+            <li><strong>Fonctions spéciales :</strong> Cliquez sur √, cos, sin, etc., pour des fonctions mathématiques spéciales.</li>
+            <li><strong>Entrée :</strong> Appuyez sur Entrée pour calculer le résultat.</li>
+            <li><strong>Retour arrière :</strong> Appuyez sur DEL pour supprimer la dernière saisie.</li>
+            <li><strong>Échap :</strong> Appuyez sur Échap pour effacer l'historique.</li>
+            <li><strong>Zoom :</strong> Cliquez sur Zoom + ou Zoom - pour ajuster la taille du canvas.</li>
+            <li><strong>AC :</strong> Cliquez sur AC pour revenir à la calculatrice de base</li>
+            <li><strong>F(x) :</strong> Cliquez sur F(x) pour aller à la calculatrice de fonction</li>
+        </ul>
+    </div>
+
+    <script src="calculatrice.js"></script>
+</body>
+</html>
